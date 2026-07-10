@@ -11,7 +11,10 @@ export default defineConfig({
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/BirthAndDeath/selflearning-pages' },
 			],
+			components: {
 
+				TwoColumnContent: './src/components/CustomTwoColumn.astro',
+			},
 			sidebar: [
 				{
 					label: 'Guides',
