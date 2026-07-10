@@ -1,5 +1,7 @@
 # selflearning-pages
 
+> **Languages:** [English](README.md) | [简体中文](README.zh-CN.md)
+
 A multilingual documentation site for self-directed learning, built with [Astro](https://astro.build) + [Starlight](https://starlight.astro.build).
 
 **Site:** [https://selflearning-pages.pages.dev/](https://selflearning-pages.pages.dev/)

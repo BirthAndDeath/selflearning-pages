@@ -1,5 +1,7 @@
 # selflearning-pages
 
+> **语言：** [English](README.md) | [简体中文](README.zh-CN.md)
+
 基于 [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) 构建的多语言自学文档站点。
 
 **站点地址：** [https://selflearning-pages.pages.dev/](https://selflearning-pages.pages.dev/)

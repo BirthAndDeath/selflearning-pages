@@ -1,0 +1,230 @@
+---
+const siteDomain: string = Astro.url.hostname || "selflearning-pages.pages.dev";
+---
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>跳转确认 - {siteDomain}</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                background: #f1f5f9;
+                color: #1e293b;
+                padding: 1.5rem;
+            }
+            .card {
+                background: white;
+                padding: 2.5rem 3rem;
+                border-radius: 16px;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+                max-width: 580px;
+                width: 100%;
+            }
+            .card h1 {
+                font-size: 1.6rem;
+                margin-bottom: 0.25rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .card .subtitle {
+                color: #94a3b8;
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+            .link-box {
+                background: #f8fafc;
+                border: 1px solid #e2e8f0;
+                border-radius: 10px;
+                padding: 0.75rem 1rem;
+                margin: 1rem 0;
+                word-break: break-all;
+                font-size: 0.95rem;
+                color: #4f46e5;
+                font-weight: 500;
+            }
+            .disclaimer {
+                background: #fefce8;
+                border-left: 4px solid #f59e0b;
+                padding: 1rem 1.25rem;
+                border-radius: 6px;
+                margin: 1.25rem 0;
+                font-size: 0.9rem;
+                color: #92400e;
+                line-height: 1.7;
+            }
+            .disclaimer strong {
+                color: #78350f;
+            }
+            .disclaimer ul {
+                margin: 0.5rem 0 0 1.25rem;
+                padding-left: 0;
+            }
+            .disclaimer li {
+                list-style: disc;
+                margin-bottom: 0.25rem;
+            }
+            .checkbox-row {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.6rem;
+                margin: 1.25rem 0 1.5rem;
+                font-size: 0.9rem;
+                color: #475569;
+                cursor: pointer;
+            }
+            .checkbox-row input[type="checkbox"] {
+                margin-top: 0.2rem;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+                accent-color: #4f46e5;
+                flex-shrink: 0;
+            }
+            .actions {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+            }
+            .btn {
+                padding: 0.6rem 2rem;
+                border: none;
+                border-radius: 8px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.2s;
+                text-decoration: none;
+                font-weight: 500;
+            }
+            .btn-secondary {
+                background: #e2e8f0;
+                color: #1e293b;
+            }
+            .btn-secondary:hover {
+                background: #cbd5e1;
+            }
+            .btn-primary {
+                background: #e2e8f0;
+                color: #94a3b8;
+                cursor: not-allowed;
+            }
+            .btn-primary.active {
+                background: #4f46e5;
+                color: white;
+                cursor: pointer;
+            }
+            .btn-primary.active:hover {
+                background: #4338ca;
+            }
+            .footer-note {
+                margin-top: 1.5rem;
+                font-size: 0.75rem;
+                color: #94a3b8;
+                text-align: center;
+                border-top: 1px solid #f1f5f9;
+                padding-top: 1rem;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <!-- 有效链接时显示 -->
+            <div id="validContent" class="hidden">
+                <h1>🔗 即将离开本站</h1>
+                <p class="subtitle">你正在访问一个外部链接</p>
+                <p style="font-size:0.85rem; color:#64748b;">目标链接：</p>
+                <div class="link-box" id="linkDisplay"></div>
+
+                <div class="disclaimer">
+                    <strong>📋 法律责任声明</strong>
+                    <ul>
+                        <li>
+                            本站仅为知识分享平台，<strong
+                                >不对外部链接的内容及可用性负责</strong
+                            >。
+                        </li>
+                        <li>
+                            外部链接仅为参考信息，<strong
+                                >不代表本站立场或认可其观点</strong
+                            >。
+                        </li>
+                        <li>
+                            访问外部链接所产生的任何风险（包括但不限于：信息安全、隐私泄露、内容不适）<strong
+                                >由用户自行承担</strong
+                            >。
+                        </li>
+                        <li>
+                            建议用户<strong>审慎评估</strong
+                            >外部链接的安全性后再进行访问。
+                        </li>
+                    </ul>
+                </div>
+
+                <label class="checkbox-row" id="agreeLabel">
+                    <input type="checkbox" id="agreeCheckbox" />
+                    <span
+                        >我已阅读并理解上述法律责任声明，并自行承担访问外部链接的风险。</span
+                    >
+                </label>
+
+                <div class="actions">
+                    <a href="/" class="btn btn-secondary">返回</a>
+                    <button id="confirmBtn" class="btn btn-primary" disabled
+                        >继续访问</button
+                    >
+                </div>
+            </div>
+
+            <!-- 无效参数时显示 -->
+            <div id="invalidContent">
+                <h1>⚠️ 参数错误</h1>
+                <p class="subtitle">缺少有效的链接参数。</p>
+                <p style="margin: 1rem 0; font-size: 0.9rem; color: #64748b;">
+                    接收到的参数：<code
+                        id="paramDisplay"
+                        style="background:#f1f5f9; padding:0.2rem 0.5rem; border-radius:4px; word-break:break-all;"
+                        >(空)</code
+                    >
+                </p>
+                <p
+                    style="margin: 1rem 0 1.5rem; font-size: 0.85rem; color: #94a3b8;"
+                >
+                    请使用 <code
+                        style="background:#f1f5f9; padding:0.2rem 0.5rem; border-radius:4px;"
+                        >?link=https://example.com</code
+                    > 格式访问。
+                </p>
+                <div class="actions">
+                    <a href="/" class="btn btn-secondary">返回首页</a>
+                </div>
+            </div>
+
+            <div class="footer-note">
+                © {new Date().getFullYear()}
+                {siteDomain} · 法律声明
+            </div>
+        </div>
+
+        <script>
+            import "../scripts/redirect";
+        </script>
+    </body>
+</html>
