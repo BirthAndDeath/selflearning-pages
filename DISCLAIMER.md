@@ -1,0 +1,52 @@
+# Disclaimer
+
+Last updated: 2026-07-10
+
+## General Information Only
+
+The content provided on SelfLearning.pages (the "Site") is for general informational and educational purposes only. It does not constitute professional advice of any kind (legal, medical, financial, or otherwise). You should consult a qualified professional for advice tailored to your specific situation.
+
+## No Warranties
+
+The Site is provided on an "AS IS" and "AS AVAILABLE" basis without any representations or warranties of any kind, express or implied, including but not limited to:
+
+- Merchantability or fitness for a particular purpose
+- Accuracy, completeness, or reliability of any content
+- Uninterrupted or error-free operation
+- Security or freedom from viruses or other harmful components
+
+## Content Accuracy
+
+While we strive to keep the information on this Site accurate and up to date, we make no guarantees regarding the correctness, completeness, or timeliness of any content. Information may become outdated, and we undertake no obligation to update it.
+
+## External Links
+
+The Site may contain links to third-party websites or resources. These links are provided for your convenience only. We do not endorse, control, or assume any responsibility for the content, privacy policies, or practices of any third-party sites. Accessing linked sites is at your own risk.
+
+## User Responsibility
+
+You are solely responsible for your use of the Site and any decisions or actions you take based on its content. You agree to:
+
+- Comply with all applicable local, national, and international laws and regulations
+- Not use the Site for any unlawful or prohibited purpose
+- Not attempt to disrupt, damage, or impair the Site's operation
+
+## Limitation of Liability
+
+To the fullest extent permitted by applicable law, in no event shall the Site owners, contributors, or affiliates be liable for any direct, indirect, incidental, consequential, special, or punitive damages arising out of or related to your use of the Site, including but not limited to loss of data, loss of profits, or personal injury, even if advised of the possibility of such damages.
+
+## Copyright and Fair Use
+
+All content on this Site is dedicated to the public domain under the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/) unless otherwise noted. However, third-party materials embedded or linked may be subject to their own copyright terms. You are responsible for respecting applicable copyright laws when using such materials.
+
+## Changes to This Disclaimer
+
+We reserve the right to modify this Disclaimer at any time without prior notice. Changes are effective immediately upon posting. Your continued use of the Site after any changes constitutes acceptance of the updated Disclaimer.
+
+## Governing Law
+
+This Disclaimer shall be governed by and construed in accordance with the laws of the People's Republic of China. Any disputes arising from the use of this Site shall be subject to the jurisdiction of the competent courts where the Site operator is located.
+
+## Contact
+
+If you have any questions about this Disclaimer, please open an issue on [GitHub](https://github.com/BirthAndDeath/selflearning-pages).

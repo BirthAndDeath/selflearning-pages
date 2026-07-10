@@ -24,6 +24,12 @@ export default defineConfig({
 					label: 'Reference',
 					items: [{ autogenerate: { directory: 'reference' } }],
 				},
+				{
+					label: 'Contribution',
+					items: [
+						{ label: 'How to contribute', slug: 'contribution/how-to-contribute' },
+					],
+				}
 			],
 			defaultLocale: 'en',
 			locales: {

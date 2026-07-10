@@ -46,6 +46,9 @@ src/content/docs/
 5. 用 `npm run build` 验证。
 6. 发起 Pull Request。
 
+在 [GitHub](https://github.com/BirthAndDeath/selflearning-pages) 上联系我们。
+MDX 语法参考：[MDX 教程](https://mdxjs.com/)
+
 ## MDX 语法
 
 ### 前置元数据

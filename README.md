@@ -44,6 +44,9 @@ To add a language: create `src/content/docs/<locale>/` and register in `astro.co
 5. Verify with `npm run build`.
 6. Open a pull request.
 
+Contact us on [GitHub](https://github.com/BirthAndDeath/selflearning-pages).
+MDX syntax reference: [MDX Tutorial](https://mdxjs.com/)
+
 ## MDX Syntax
 
 ### Frontmatter
